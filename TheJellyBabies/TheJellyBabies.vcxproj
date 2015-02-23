@@ -1,0 +1,173 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{3CCBB016-6272-4437-B15A-18778C3A5AA6}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>TheJellyBabies</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>./Box2D;$(FMOD_SDK)\inc;$(IncludePath)</IncludePath>
+    <LibraryPath>$(FMOD_SDK)\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(IncludePath)</IncludePath>
+    <LibraryPath>$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>./;$(SFML_SDK)\include;SFML-2.1\include;.\spine-runtimes-master\spine-sfml\src;.\spine-runtimes-master\spine-c\include;.\spine-runtimes-master\spine-c\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>Box2D.lib;%(AdditionalDependencies);sfml-window-d.lib;sfml-main-d.lib;sfml-graphics-d.lib;sfml-system-d.lib;kernel32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>./lib;$(SFML_SDK)\lib;SFML-2.1\Libs\Debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <Text Include="Level1.txt" />
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="BoundingBox.h" />
+    <ClInclude Include="BoxManager.h" />
+    <ClInclude Include="Buttons.h" />
+    <ClInclude Include="Enemy.h" />
+    <ClInclude Include="EnemyManager.h" />
+    <ClInclude Include="Entity.h" />
+    <ClInclude Include="gameClock.h" />
+    <ClInclude Include="Level.h" />
+    <ClInclude Include="Rope.h" />
+    <ClInclude Include="RopeManager.h" />
+    <ClInclude Include="SoundManager.h" />
+    <ClInclude Include="spine-runtimes-master\spine-c\src\spine\Json.h" />
+    <ClInclude Include="spine-sfml.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="targetver.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="BoundingBox.cpp" />
+    <ClCompile Include="BoxManager.cpp" />
+    <ClCompile Include="Buttons.cpp" />
+    <ClCompile Include="Enemy.cpp" />
+    <ClCompile Include="EnemyManager.cpp" />
+    <ClCompile Include="Entity.cpp" />
+    <ClCompile Include="gameClock.cpp" />
+    <ClCompile Include="Level.cpp" />
+    <ClCompile Include="Rope.cpp" />
+    <ClCompile Include="RopeManager.cpp" />
+    <ClCompile Include="SoundManager.cpp" />
+    <ClCompile Include="spine-runtimes-master\spine-c\src\spine\Animation.c" />
+    <ClCompile Include="spine-runtimes-master\spine-c\src\spine\AnimationState.c" />
+    <ClCompile Include="spine-runtimes-master\spine-c\src\spine\AnimationStateData.c" />
+    <ClCompile Include="spine-runtimes-master\spine-c\src\spine\Atlas.c" />
+    <ClCompile Include="spine-runtimes-master\spine-c\src\spine\AtlasAttachmentLoader.c" />
+    <ClCompile Include="spine-runtimes-master\spine-c\src\spine\Attachment.c" />
+    <ClCompile Include="spine-runtimes-master\spine-c\src\spine\AttachmentLoader.c" />
+    <ClCompile Include="spine-runtimes-master\spine-c\src\spine\Bone.c" />
+    <ClCompile Include="spine-runtimes-master\spine-c\src\spine\BoneData.c" />
+    <ClCompile Include="spine-runtimes-master\spine-c\src\spine\BoundingBoxAttachment.c" />
+    <ClCompile Include="spine-runtimes-master\spine-c\src\spine\Event.c" />
+    <ClCompile Include="spine-runtimes-master\spine-c\src\spine\EventData.c" />
+    <ClCompile Include="spine-runtimes-master\spine-c\src\spine\extension.c" />
+    <ClCompile Include="spine-runtimes-master\spine-c\src\spine\IkConstraint.c" />
+    <ClCompile Include="spine-runtimes-master\spine-c\src\spine\IkConstraintData.c" />
+    <ClCompile Include="spine-runtimes-master\spine-c\src\spine\Json.c" />
+    <ClCompile Include="spine-runtimes-master\spine-c\src\spine\MeshAttachment.c" />
+    <ClCompile Include="spine-runtimes-master\spine-c\src\spine\RegionAttachment.c" />
+    <ClCompile Include="spine-runtimes-master\spine-c\src\spine\Skeleton.c" />
+    <ClCompile Include="spine-runtimes-master\spine-c\src\spine\SkeletonBounds.c" />
+    <ClCompile Include="spine-runtimes-master\spine-c\src\spine\SkeletonData.c" />
+    <ClCompile Include="spine-runtimes-master\spine-c\src\spine\SkeletonJson.c" />
+    <ClCompile Include="spine-runtimes-master\spine-c\src\spine\Skin.c" />
+    <ClCompile Include="spine-runtimes-master\spine-c\src\spine\SkinnedMeshAttachment.c" />
+    <ClCompile Include="spine-runtimes-master\spine-c\src\spine\Slot.c" />
+    <ClCompile Include="spine-runtimes-master\spine-c\src\spine\SlotData.c" />
+    <ClCompile Include="spine-sfml.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="TheJellyBabies.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="BadMan.png" />
+    <Image Include="ball.png" />
+    <Image Include="box.png" />
+    <Image Include="button.png" />
+    <Image Include="chain.png" />
+    <Image Include="chandelier.png" />
+    <Image Include="man.png" />
+    <Image Include="myTextures.png" />
+    <Image Include="myTextures2.png" />
+    <Image Include="myTextures3.png" />
+    <Image Include="myTextures7.png" />
+    <Image Include="vine.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Media Include="gun.mp3" />
+    <Media Include="jump.mp3" />
+    <Media Include="song.mp3" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

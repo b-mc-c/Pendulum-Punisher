@@ -1,0 +1,10 @@
+Create entity class for all other entities inherit from (Currently working on this)
+Get Basic sprites for simulation (done)
+Figure out box2d get it set up to work in our project (done)
+
+
+
+Make a level from a string 
+Make a tile object that inherits from entity
+Make a person that inherits from the entity
+Make an enemy that inherits from entity

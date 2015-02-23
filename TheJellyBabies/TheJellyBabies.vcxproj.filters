@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="BoundingBox.cpp" />
+    <ClCompile Include="BoxManager.cpp" />
+    <ClCompile Include="Buttons.cpp" />
+    <ClCompile Include="Enemy.cpp" />
+    <ClCompile Include="EnemyManager.cpp" />
+    <ClCompile Include="Entity.cpp" />
+    <ClCompile Include="Level.cpp" />
+    <ClCompile Include="Rope.cpp" />
+    <ClCompile Include="stdafx.cpp" />
+    <ClCompile Include="TheJellyBabies.cpp" />
+    <ClCompile Include="RopeManager.cpp" />
+    <ClCompile Include="SoundManager.cpp" />
+    <ClCompile Include="spine-runtimes-master\spine-c\src\spine\Animation.c" />
+    <ClCompile Include="spine-runtimes-master\spine-c\src\spine\AnimationState.c" />
+    <ClCompile Include="spine-runtimes-master\spine-c\src\spine\AnimationStateData.c" />
+    <ClCompile Include="spine-runtimes-master\spine-c\src\spine\Atlas.c" />
+    <ClCompile Include="spine-runtimes-master\spine-c\src\spine\AtlasAttachmentLoader.c" />
+    <ClCompile Include="spine-runtimes-master\spine-c\src\spine\Attachment.c" />
+    <ClCompile Include="spine-runtimes-master\spine-c\src\spine\AttachmentLoader.c" />
+    <ClCompile Include="spine-runtimes-master\spine-c\src\spine\Bone.c" />
+    <ClCompile Include="spine-runtimes-master\spine-c\src\spine\BoneData.c" />
+    <ClCompile Include="spine-runtimes-master\spine-c\src\spine\BoundingBoxAttachment.c" />
+    <ClCompile Include="spine-runtimes-master\spine-c\src\spine\Event.c" />
+    <ClCompile Include="spine-runtimes-master\spine-c\src\spine\EventData.c" />
+    <ClCompile Include="spine-runtimes-master\spine-c\src\spine\extension.c" />
+    <ClCompile Include="spine-runtimes-master\spine-c\src\spine\IkConstraint.c" />
+    <ClCompile Include="spine-runtimes-master\spine-c\src\spine\IkConstraintData.c" />
+    <ClCompile Include="spine-runtimes-master\spine-c\src\spine\Json.c" />
+    <ClCompile Include="spine-runtimes-master\spine-c\src\spine\MeshAttachment.c" />
+    <ClCompile Include="spine-runtimes-master\spine-c\src\spine\RegionAttachment.c" />
+    <ClCompile Include="spine-runtimes-master\spine-c\src\spine\Skeleton.c" />
+    <ClCompile Include="spine-runtimes-master\spine-c\src\spine\SkeletonBounds.c" />
+    <ClCompile Include="spine-runtimes-master\spine-c\src\spine\SkeletonData.c" />
+    <ClCompile Include="spine-runtimes-master\spine-c\src\spine\SkeletonJson.c" />
+    <ClCompile Include="spine-runtimes-master\spine-c\src\spine\Skin.c" />
+    <ClCompile Include="spine-runtimes-master\spine-c\src\spine\SkinnedMeshAttachment.c" />
+    <ClCompile Include="spine-runtimes-master\spine-c\src\spine\Slot.c" />
+    <ClCompile Include="spine-runtimes-master\spine-c\src\spine\SlotData.c" />
+    <ClCompile Include="spine-sfml.cpp" />
+    <ClCompile Include="gameClock.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="BoundingBox.h" />
+    <ClInclude Include="BoxManager.h" />
+    <ClInclude Include="Buttons.h" />
+    <ClInclude Include="Enemy.h" />
+    <ClInclude Include="EnemyManager.h" />
+    <ClInclude Include="Entity.h" />
+    <ClInclude Include="Level.h" />
+    <ClInclude Include="Rope.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="RopeManager.h" />
+    <ClInclude Include="SoundManager.h" />
+    <ClInclude Include="spine-runtimes-master\spine-c\src\spine\Json.h" />
+    <ClInclude Include="spine-sfml.h" />
+    <ClInclude Include="gameClock.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="BadMan.png" />
+    <Image Include="box.png" />
+    <Image Include="button.png" />
+    <Image Include="man.png" />
+    <Image Include="myTextures.png" />
+    <Image Include="myTextures2.png" />
+    <Image Include="myTextures3.png" />
+    <Image Include="chandelier.png" />
+    <Image Include="ball.png" />
+    <Image Include="vine.png" />
+    <Image Include="chain.png" />
+    <Image Include="myTextures7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+    <Text Include="Level1.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Media Include="gun.mp3" />
+    <Media Include="jump.mp3" />
+    <Media Include="song.mp3" />
+  </ItemGroup>
+</Project>
