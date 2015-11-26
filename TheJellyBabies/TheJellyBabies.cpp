@@ -27,7 +27,7 @@
 #include "Rope.h"
 #include "Buttons.h"
 #include "RopeManager.h"
-#include "SoundManager.h"
+//#include "SoundManager.h"
 #include "gameClock.h"
 using namespace std;
 
@@ -73,9 +73,9 @@ int _tmain(int argc, _TCHAR* argv[])
 	Buttons PlayLevel4;
 	Buttons PlayLevel5;
 	Buttons buttonBack;
-	SoundManager soundm;
-	soundm.init();
-	soundm.loadSound();
+	//SoundManager soundm;
+	//soundm.init();
+	//soundm.loadSound();
 	if(!BackgroundTexture.loadFromFile("menu.png"))
 	{
 		cout << "image did not load" << endl;
@@ -124,7 +124,7 @@ int _tmain(int argc, _TCHAR* argv[])
 			if (buttonPlay.update(Window, deltatime))//||sf::Keyboard::isKeyPressed(sf::Keyboard::Return))
 				{	
 					gameClock::clock.restart();
-					soundm.playSound(0);
+					//soundm.playSound(0);
 					GameMode = PLAY;
 					mEntity.setPosition(sf::Vector2f(29 * SCALE ,16 * SCALE));
 					Level::levelNumber(0);
@@ -174,7 +174,7 @@ int _tmain(int argc, _TCHAR* argv[])
 					if(!jumpPressed)
 					{
 						jumpPressed = true;
-						soundm.playSound(1);
+						//soundm.playSound(1);
 					}
 				}
 				else 
@@ -184,12 +184,12 @@ int _tmain(int argc, _TCHAR* argv[])
 				
 				if(sf::Keyboard::isKeyPressed(sf::Keyboard::P))
 				{
-					soundm.channels[0]->setPaused(true);
+					//soundm.channels[0]->setPaused(true);
 				}
 				
 				if(sf::Keyboard::isKeyPressed(sf::Keyboard::O))
 				{
-					soundm.channels[0]->setPaused(false);
+					//soundm.channels[0]->setPaused(false);
 				}
 				//cout << deltatime << endl;
 				
@@ -230,7 +230,7 @@ int _tmain(int argc, _TCHAR* argv[])
 					if(Level::levelNumber(0))
 					{
 						gameClock::clock.restart();
-						soundm.playSound(0);	
+						//soundm.playSound(0);	
 						mEntity.setPosition(sf::Vector2f(29 * SCALE ,16 * SCALE));
 						GameMode = PLAY;
 					}
@@ -242,7 +242,7 @@ int _tmain(int argc, _TCHAR* argv[])
 					if(Level::levelNumber(1))
 					{
 						gameClock::clock.restart();
-						soundm.playSound(0);
+						//soundm.playSound(0);
 						mEntity.setPosition(sf::Vector2f(29 * SCALE ,16 * SCALE));
 						GameMode = PLAY;
 					}
@@ -254,7 +254,7 @@ int _tmain(int argc, _TCHAR* argv[])
 					if(Level::levelNumber(2))
 					{
 						gameClock::clock.restart();
-						soundm.playSound(0);
+						//soundm.playSound(0);
 						mEntity.setPosition(sf::Vector2f(29 * SCALE ,16 * SCALE));
 						GameMode = PLAY;
 					}
@@ -266,7 +266,7 @@ int _tmain(int argc, _TCHAR* argv[])
 					if(Level::levelNumber(3))
 					{
 						gameClock::clock.restart();
-						soundm.playSound(0);
+						//soundm.playSound(0);
 						mEntity.setPosition(sf::Vector2f(29 * SCALE ,16 * SCALE));
 						GameMode = PLAY;
 					}
@@ -278,7 +278,7 @@ int _tmain(int argc, _TCHAR* argv[])
 					if(Level::levelNumber(4))
 					{
 						gameClock::clock.restart();
-						soundm.playSound(0);
+						//soundm.playSound(0);
 						mEntity.setPosition(sf::Vector2f(29 * SCALE ,16 * SCALE));
 						GameMode = PLAY;
 					}
